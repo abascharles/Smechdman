@@ -166,6 +166,93 @@ if (BMIMark > BMIJohn) {
 } else {
   console.log(`John's BMI ${BMIJohn} is higher than Mark's ${BMIMark}`);
 }
+
+
+//Type Conversion
+const inputYear = "1991";
+console.log(Number(inputYear));
+console.log(Number(inputYear) + 18);
+console.log(String(23));
+
+//Type Coersion
+console.log();
+
+
+// Truthy and Falsy values
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Abas"));
+console.log(Boolean({}));
+
+// Example
+let money = 0;
+if (money) {
+  console.log("Don't spend it all");
+} else {
+  console.log("You should get a job");
+}
+
+
+// Equality Operators: ==vs===
+const age = 18;
+if (age === 18) console.log("You just became an adult :D (strict)"); //does not do type coersion.(ensures that the 'age' must be both the same type and value as 18)
+if (age == 18) console.log("You just became an adult :D (loose)"); //does type coersion  - avoid while comparing values.
+
+// Getting value from user
+
+const favorite = Number(prompt("What is your favorite number?"));
+console.log(favorite);
+console.log(typeof favorite);
+
+if (favorite === 23) {
+  console.log("Cool! 23 is an ama23zing number");
+} else if (favorite === 7) {
+  console.log("7 is also a cool number");
+} else if (favorite === 9) {
+  console.log("9 is also a cool number");
+} else {
+  console.log("Number is not 23 or 7 or 9");
+}
+
+if (favorite !== 23) {
+  console.log("Why not 23?");
+}
 */
 
-//Type Conversion and Coercion
+// Boolean logic/ logic operators
+const hasDriversLicense = true;
+const hasGoodVision = true;
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+// if (shouldDrive) {
+//   console.log("Sarah is able to drive");
+// } else {
+//   console.log("Someone else should drive...");
+// }
+
+const isTired = false;
+
+const shouldDrive = hasDriversLicense && hasGoodVision && !isTired;
+
+console.log(hasDriversLicense || hasGoodVision || isTired);
+
+if (shouldDrive) {
+  console.log("Sarah is able to drive");
+} else {
+  console.log("Someone else should drive...");
+}
+
+//Coding Challange 3
+const scoreDolphins = (96 + 108 + 89) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+
+if (scoreDolphins > scoreKoalas) {
+  console.log("Dolphins win the trophy");
+} else if (scoreKoalas > scoreDolphins) {
+  console.log("Koalas win the trophy");
+} else if (scoreDolphins === scoreKoalas) {
+  console.log("Both win the trophy");
+}
