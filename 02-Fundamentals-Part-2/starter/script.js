@@ -98,24 +98,66 @@
 // console.log(yearsUnitillRetirement(1991, "Bob"));
 // console.log(yearsUnitillRetirement(1970, "Mike"));
 
-// CHALLANGE 5 Ex1
+// CHALLANGE 5 - Functions
 
-const calcAverage = (score1, score2, score3) => {
-  const avg = (score1 + score2 + score3) / 3;
-  return avg;
+// const calcAverage = (score1, score2, score3) => {
+//   const avg = (score1 + score2 + score3) / 3;
+//   return avg;
+// };
+
+// const scoreDolphins = calcAverage(44, 23, 71);
+// const scoreKoalas = calcAverage(65, 54, 49);
+
+// const checkWinner = function (avgDolphins, avgKoalas) {
+//   if (avgDolphins > avgKoalas) {
+//     console.log(`Dolphins win ${avgDolphins} vs ${avgKoalas}`);
+//   } else if (avgKoalas > avgDolphins) {
+//     console.log(`Koalas win ${avgKoalas} vs ${avgDolphins}`);
+//   } else {
+//     console.log("No team wins");
+//   }
+// };
+
+// checkWinner(scoreDolphins, scoreKoalas);
+
+// Arrays
+const friend1 = "Michael";
+const friend2 = "Steven";
+const friend3 = "Peter";
+
+const friends = ["Michael", "Steven", "Peter"];
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length); //know the length
+console.log(friends[friends.length - 1]); //get the last value of the array
+
+// Change the value in position 2 in ana array
+friends[2] = "Tindel";
+console.log(friends);
+
+// Holding diffrent values in a single array
+const tindel = ["William", "Tindel", 2037 - 1991, "teacher", friends];
+console.log(tindel);
+
+// Exercise
+
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
 };
+const years = [1990, 1967, 2002, 2010, 2018];
 
-const scoreDolphins = calcAverage(44, 23, 71);
-const scoreKoalas = calcAverage(65, 54, 49);
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
 
-const checkWinner = function (avgDolphins, avgKoalas) {
-  if (avgDolphins > avgKoalas) {
-    console.log(`Dolphins win ${avgDolphins} vs ${avgKoalas}`);
-  } else if (avgKoalas > avgDolphins) {
-    console.log(`Koalas win ${avgKoalas} vs ${avgDolphins}`);
-  } else {
-    console.log("No team wins");
-  }
-};
+console.log(age1, age2, age3);
 
-checkWinner(scoreDolphins, scoreKoalas);
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[years.length - 1]),
+];
+
+console.log(ages);
