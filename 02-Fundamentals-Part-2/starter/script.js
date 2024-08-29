@@ -181,3 +181,38 @@ console.log(friends);
 // shift
 friends.shift();
 console.log(friends);
+
+// Getting indexOf an element.
+console.log(friends.indexOf("Peter"));
+console.log(friends.indexOf("Chela"));
+
+//Checks if an element is available in the array returns true if present and false if absent - uses strict equality, used to write conditions
+friends.includes("Steven");
+friends.includes("Chela");
+
+if (friends.includes("Peter")) {
+  console.log("I have a friend");
+}
+
+// #CHALLANGE 2
+
+// const calcTip = function (bill) {
+//   let tip;
+//   if (bill >= 50 && bill <= 300) {
+//     tip = bill * 0.15;
+//   } else {
+//     tip = bill * 0.2;
+//   }
+
+//   return tip;
+// };
+
+const calcTip = (bill) => {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
+
+console.log(tips, total);
