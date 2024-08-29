@@ -207,12 +207,71 @@ if (friends.includes("Peter")) {
 //   return tip;
 // };
 
-const calcTip = (bill) => {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const calcTip = (bill) => {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// };
+
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
+
+// console.log(tips, total);
+
+// Objects
+const jonasArray = [
+  "Jonas",
+  "Schmedman",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+];
+
+// Used to give key value pairs
+const jonas = {
+  firstName: "jonas",
+  lastName: "Schmedman",
+  job: "teacher",
+  age: 2037 - 1991,
+  friends: ["Michael", "Peter", "Steven"],
 };
 
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
+console.log(jonas);
 
-console.log(tips, total);
+// getting property from an object
+console.log(jonas.lastName);
+console.log(jonas["lastName"]);
+
+// one can use expressions while using bracket notation
+const nameKey = "Name";
+console.log(jonas["first" + nameKey]);
+console.log(jonas["last" + nameKey]);
+
+// Exampleage
+
+// const intrestedIn = prompt(
+//   "What do you want to know about jonas? Choose between firstName, lastName, age, job and friends "
+// );
+
+// console.log(jonas[intrestedIn]);
+
+// if (jonas[intrestedIn]) {
+//   console.log(jonas[intrestedIn]);
+// } else {
+//   console.log(
+//     "Wrong request! Choose between firstName, lastName, age, job and friends "
+//   );
+// }
+
+//Adding properties to the object
+
+jonas.location = "Portugal";
+jonas["twitter"] = "@jonasschmedtman";
+
+console.log(jonas);
+
+// Challange
+// Jonas has 3 friends, and his best friend is called Michael
+
+console.log(
+  `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]} `
+);
