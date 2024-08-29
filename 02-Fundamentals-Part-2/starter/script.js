@@ -121,43 +121,63 @@
 // checkWinner(scoreDolphins, scoreKoalas);
 
 // Arrays
-const friend1 = "Michael";
-const friend2 = "Steven";
-const friend3 = "Peter";
+// const friend1 = "Michael";
+// const friend2 = "Steven";
+// const friend3 = "Peter";
 
-const friends = ["Michael", "Steven", "Peter"];
+// const friends = ["Michael", "Steven", "Peter"];
 
-console.log(friends[0]);
-console.log(friends[2]);
+// console.log(friends[0]);
+// console.log(friends[2]);
 
-console.log(friends.length); //know the length
-console.log(friends[friends.length - 1]); //get the last value of the array
+// console.log(friends.length); //know the length
+// console.log(friends[friends.length - 1]); //get the last value of the array
 
-// Change the value in position 2 in ana array
-friends[2] = "Tindel";
-console.log(friends);
+// // Change the value in position 2 in ana array
+// friends[2] = "Tindel";
+// console.log(friends);
 
-// Holding diffrent values in a single array
-const tindel = ["William", "Tindel", 2037 - 1991, "teacher", friends];
-console.log(tindel);
+// // Holding diffrent values in a single array
+// const tindel = ["William", "Tindel", 2037 - 1991, "teacher", friends];
+// console.log(tindel);
 
 // Exercise
 
-const calcAge = function (birthYear) {
-  return 2037 - birthYear;
-};
-const years = [1990, 1967, 2002, 2010, 2018];
+// const calcAge = function (birthYear) {
+//   return 2037 - birthYear;
+// };
+// const years = [1990, 1967, 2002, 2010, 2018];
 
-const age1 = calcAge(years[0]);
-const age2 = calcAge(years[1]);
-const age3 = calcAge(years[years.length - 1]);
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[1]);
+// const age3 = calcAge(years[years.length - 1]);
 
-console.log(age1, age2, age3);
+// console.log(age1, age2, age3);
 
-const ages = [
-  calcAge(years[0]),
-  calcAge(years[1]),
-  calcAge(years[years.length - 1]),
-];
+// const ages = [
+//   calcAge(years[0]),
+//   calcAge(years[1]),
+//   calcAge(years[years.length - 1]),
+// ];
 
-console.log(ages);
+// console.log(ages);
+
+// Array Methods
+// Push - adds elements at the end of the array/gets the length of the new array
+const friends = ["Michael", "Steven", "Peter"];
+const newLength = friends.push("Hera");
+console.log(friends);
+console.log(newLength);
+
+// Unshift - add elements at the begining of an array
+friends.unshift("Chela");
+console.log(friends);
+
+// Remove Elements
+// pop
+friends.pop();
+console.log(friends);
+
+// shift
+friends.shift();
+console.log(friends);
