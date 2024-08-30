@@ -217,36 +217,36 @@ if (friends.includes("Peter")) {
 
 // console.log(tips, total);
 
-// Objects
-const jonasArray = [
-  "Jonas",
-  "Schmedman",
-  2037 - 1991,
-  "teacher",
-  ["Michael", "Peter", "Steven"],
-];
+// // Objects
+// const jonasArray = [
+//   "Jonas",
+//   "Schmedman",
+//   2037 - 1991,
+//   "teacher",
+//   ["Michael", "Peter", "Steven"],
+// ];
 
-// Used to give key value pairs
-const jonas = {
-  firstName: "jonas",
-  lastName: "Schmedman",
-  job: "teacher",
-  age: 2037 - 1991,
-  friends: ["Michael", "Peter", "Steven"],
-};
+// // Used to give key value pairs
+// const jonas = {
+//   firstName: "jonas",
+//   lastName: "Schmedman",
+//   job: "teacher",
+//   age: 2037 - 1991,
+//   friends: ["Michael", "Peter", "Steven"],
+// };
 
-console.log(jonas);
+// console.log(jonas);
 
-// getting property from an object
-console.log(jonas.lastName);
-console.log(jonas["lastName"]);
+// // getting property from an object
+// console.log(jonas.lastName);
+// console.log(jonas["lastName"]);
 
-// one can use expressions while using bracket notation
-const nameKey = "Name";
-console.log(jonas["first" + nameKey]);
-console.log(jonas["last" + nameKey]);
+// // one can use expressions while using bracket notation
+// const nameKey = "Name";
+// console.log(jonas["first" + nameKey]);
+// console.log(jonas["last" + nameKey]);
 
-// Exampleage
+// // Exampleage
 
 // const intrestedIn = prompt(
 //   "What do you want to know about jonas? Choose between firstName, lastName, age, job and friends "
@@ -262,16 +262,38 @@ console.log(jonas["last" + nameKey]);
 //   );
 // }
 
-//Adding properties to the object
+// //Adding properties to the object
 
-jonas.location = "Portugal";
-jonas["twitter"] = "@jonasschmedtman";
+// jonas.location = "Portugal";
+// jonas["twitter"] = "@jonasschmedtman";
 
-console.log(jonas);
+// console.log(jonas);
 
-// Challange
-// Jonas has 3 friends, and his best friend is called Michael
+// // Challange
+// // Jonas has 3 friends, and his best friend is called Michael
 
-console.log(
-  `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]} `
-);
+// console.log(
+//   `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]} `
+// );
+
+// Object Methods  -  functions inside an object
+const jonas = {
+  firstName: "jonas",
+  lastName: "Schmedman",
+  job: "teacher",
+  birthYear: 1991,
+  friends: ["Michael", "Peter", "Steven"],
+  hasDriversLicense: true,
+
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear;
+  // },
+
+  // Using this(represents the entire object) Keyword
+  calcAge: function () {
+    return 2037 - this.birthYear;
+  },
+};
+
+console.log(jonas.calcAge());
+// console.log(jonas["calcAge"](jonas.birthYear));
