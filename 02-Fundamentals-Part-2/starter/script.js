@@ -238,15 +238,15 @@ if (friends.includes("Peter")) {
 // console.log(jonas);
 
 // // getting property from an object
-// console.log(jonas.lastName);
-// console.log(jonas["lastName"]);
+// console.log(jonas.lastName);  /dot notation
+// console.log(jonas["lastName"]);  //bracket notation
 
 // // one can use expressions while using bracket notation
 // const nameKey = "Name";
 // console.log(jonas["first" + nameKey]);
 // console.log(jonas["last" + nameKey]);
 
-// // Exampleage
+// // Example age
 
 // const intrestedIn = prompt(
 //   "What do you want to know about jonas? Choose between firstName, lastName, age, job and friends "
@@ -255,7 +255,7 @@ if (friends.includes("Peter")) {
 // console.log(jonas[intrestedIn]);
 
 // if (jonas[intrestedIn]) {
-//   console.log(jonas[intrestedIn]);
+//   console.log(jonas[intrestedIn]);  //After the user inputs their choice, the code checks whether the input corresponds to a valid property in the jonas object.
 // } else {
 //   console.log(
 //     "Wrong request! Choose between firstName, lastName, age, job and friends "
@@ -283,17 +283,37 @@ const jonas = {
   job: "teacher",
   birthYear: 1991,
   friends: ["Michael", "Peter", "Steven"],
-  hasDriversLicense: true,
+  hasDriversLicense: false,
 
   // calcAge: function (birthYear) {
   //   return 2037 - birthYear;
   // },
 
   // Using this(represents the entire object) Keyword
+  // calcAge: function () {
+  //   return 2037 - this.birthYear;
+  // },
+
   calcAge: function () {
-    return 2037 - this.birthYear;
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()} - year old ${
+      jonas.job
+    } and he has ${this.hasDriversLicense ? "a" : "no"} drivers licesnse`;
   },
 };
 
 console.log(jonas.calcAge());
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
 // console.log(jonas["calcAge"](jonas.birthYear));
+
+// Challange
+// 'Jonas is a 46-year old teacher and he has a drivers license'
+
+console.log(jonas.getSummary());
