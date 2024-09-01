@@ -277,43 +277,90 @@ if (friends.includes("Peter")) {
 // );
 
 // Object Methods  -  functions inside an object
-const jonas = {
-  firstName: "jonas",
-  lastName: "Schmedman",
-  job: "teacher",
-  birthYear: 1991,
-  friends: ["Michael", "Peter", "Steven"],
-  hasDriversLicense: false,
+// const jonas = {
+//   firstName: "jonas",
+//   lastName: "Schmedman",
+//   job: "teacher",
+//   birthYear: 1991,
+//   friends: ["Michael", "Peter", "Steven"],
+//   hasDriversLicense: false,
 
-  // calcAge: function (birthYear) {
-  //   return 2037 - birthYear;
-  // },
+//   // calcAge: function (birthYear) {
+//   //   return 2037 - birthYear;
+//   // },
 
-  // Using this(represents the entire object) Keyword
-  // calcAge: function () {
-  //   return 2037 - this.birthYear;
-  // },
+//   // Using this(represents the entire object) Keyword
+//   // calcAge: function () {
+//   //   return 2037 - this.birthYear;
+//   // },
 
-  calcAge: function () {
-    this.age = 2037 - this.birthYear;
-    return this.age;
-  },
+//   calcAge: function () {
+//     this.age = 2037 - this.birthYear;
+//     return this.age;
+//   },
 
-  getSummary: function () {
-    return `${this.firstName} is a ${this.calcAge()} - year old ${
-      jonas.job
-    } and he has ${this.hasDriversLicense ? "a" : "no"} drivers licesnse`;
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge()} - year old ${
+//       jonas.job
+//     } and he has ${this.hasDriversLicense ? "a" : "no"} drivers licesnse`;
+//   },
+// };
+
+// console.log(jonas.calcAge());
+
+// console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
+// // console.log(jonas["calcAge"](jonas.birthYear));
+
+// // Challange
+// // 'Jonas is a 46-year old teacher and he has a drivers license'
+
+// console.log(jonas.getSummary());
+
+// CHALLANGE 3
+const mark = {
+  fullName: "Mark Miller",
+  weight: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.weight / this.height ** 2;
+    return this.bmi;
   },
 };
 
-console.log(jonas.calcAge());
+const john = {
+  fullName: "John Smith",
+  weight: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.weight / this.height ** 2;
+    return this.bmi;
+  },
+};
 
-console.log(jonas.age);
-console.log(jonas.age);
-console.log(jonas.age);
-// console.log(jonas["calcAge"](jonas.birthYear));
+// calculating BMI for both mark and john
+mark.calcBMI();
+john.calcBMI();
 
-// Challange
-// 'Jonas is a 46-year old teacher and he has a drivers license'
+// Compare their BMIs and log the result
 
-console.log(jonas.getSummary());
+if (mark.bmi > john.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI (${mark.bmi.toFixed(1)}) is higher than ${
+      john.fullName
+    }'s (${john.bmi.toFixed(1)})!`
+  );
+} else if (john.bmi > mark.bmi) {
+  console.log(
+    `${john.fullName}'s BMI (${john.bmi.toFixed(1)}) is higher than ${
+      mark.fullName
+    }'s (${mark.bmi.toFixed(1)})!`
+  );
+} else {
+  console.log(
+    `${mark.fullName} and ${
+      john.fullName
+    } have the same BMI (${mark.bmi.toFixed(1)})!`
+  );
+}
