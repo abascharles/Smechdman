@@ -162,6 +162,8 @@
 
 // console.log(ages);
 
+
+//////////////////////////////////////////////////
 // Array Methods
 // Push - adds elements at the end of the array/gets the length of the new array
 const friends = ["Michael", "Steven", "Peter"];
@@ -194,6 +196,8 @@ if (friends.includes("Peter")) {
   console.log("I have a friend");
 }
 
+
+///////////////////////////////////////////
 // #CHALLANGE 2
 
 // const calcTip = function (bill) {
@@ -217,7 +221,9 @@ if (friends.includes("Peter")) {
 
 // console.log(tips, total);
 
-// // Objects
+
+// ///////////////////////////////////////
+// Introduction to Objects
 // const jonasArray = [
 //   "Jonas",
 //   "Schmedman",
@@ -276,6 +282,8 @@ if (friends.includes("Peter")) {
 //   `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]} `
 // );
 
+///////////////////////////////////////////////////
+
 // Object Methods  -  functions inside an object
 // const jonas = {
 //   firstName: "jonas",
@@ -318,6 +326,7 @@ if (friends.includes("Peter")) {
 
 // console.log(jonas.getSummary());
 
+////////////////////////////////////
 // CHALLANGE 3
 // const mark = {
 //   fullName: "Mark Miller",
@@ -360,4 +369,19 @@ console.log("Lifting weights repetition 1🏋🏾");
 
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition ${rep}🏋🏾`);
+}
+
+//Looping arrays: Breaking and Continuing.
+const jonas = [
+  "Jonas",
+  "Schmedman",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+];
+
+
+// logging all elements to the array
+for(let i = 0; i < 5 ; i++ ){
+  console.log(jonas[0])
 }
