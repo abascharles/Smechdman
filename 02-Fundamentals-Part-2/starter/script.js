@@ -165,35 +165,35 @@
 //////////////////////////////////////////////////
 // Array Methods
 // Push - adds elements at the end of the array/gets the length of the new array
-const friends = ["Michael", "Steven", "Peter"];
-const newLength = friends.push("Hera");
-console.log(friends);
-console.log(newLength);
+// const friends = ["Michael", "Steven", "Peter"];
+// const newLength = friends.push("Hera");
+// console.log(friends);
+// console.log(newLength);
 
 // Unshift - add elements at the begining of an array
-friends.unshift("Chela");
-console.log(friends);
+// friends.unshift("Chela");
+// console.log(friends);
 
-// Remove Elements
-// pop
-friends.pop();
-console.log(friends);
+// // Remove Elements
+// // pop
+// friends.pop();
+// console.log(friends);
 
-// shift
-friends.shift();
-console.log(friends);
+// // shift
+// friends.shift();
+// console.log(friends);
 
-// Getting indexOf an element.
-console.log(friends.indexOf("Peter"));
-console.log(friends.indexOf("Chela"));
+// // Getting indexOf an element.
+// console.log(friends.indexOf("Peter"));
+// console.log(friends.indexOf("Chela"));
 
-//Checks if an element is available in the array returns true if present and false if absent - uses strict equality, used to write conditions
-friends.includes("Steven");
-friends.includes("Chela");
+// //Checks if an element is available in the array returns true if present and false if absent - uses strict equality, used to write conditions
+// friends.includes("Steven");
+// friends.includes("Chela");
 
-if (friends.includes("Peter")) {
-  console.log("I have a friend");
-}
+// if (friends.includes("Peter")) {
+//   console.log("I have a friend");
+//}
 
 ///////////////////////////////////////////
 // #CHALLANGE 2
@@ -361,56 +361,81 @@ if (friends.includes("Peter")) {
 //   );
 // }
 
+// ///////////////////////////////////////////
 // Iteration: The for loop
-console.log("Lifting weights repetition 1🏋🏾");
+// console.log("Lifting weights repetition 1🏋🏾");
 
-for (let rep = 1; rep <= 10; rep++) {
-  console.log(`Lifting weights repetition ${rep}🏋🏾`);
-}
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep}🏋🏾`);
+// }
 
-//Looping arrays: Breaking and Continuing.
+// //Looping arrays: Breaking and Continuing.
 
-const jonas = [
-  "Jonas",
-  "Schmedman",
-  2037 - 1991,
-  "teacher",
-  ["Michael", "Peter", "Steven"],
-  true,
-];
-const types = [];
+// const jonas = [
+//   "Jonas",
+//   "Schmedman",
+//   2037 - 1991,
+//   "teacher",
+//   ["Michael", "Peter", "Steven"],
+//   true,
+// ];
+// const types = [];
 
-// logging all elements to the array
-for (let i = 0; i < jonas.length; i++) {
-  // Reading from jonas array
-  console.log(jonas[i], typeof jonas[i]);
+// // logging all elements to the array
+// for (let i = 0; i < jonas.length; i++) {
+//   // Reading from jonas array
+//   console.log(jonas[i], typeof jonas[i]);
 
-  // Filling types array
-  // types[i] = typeof jonas[i];
-  types.push(typeof jonas[i]);
-}
+//   // Filling types array
+//   // types[i] = typeof jonas[i];
+//   types.push(typeof jonas[i]);
+// }
 
-console.log(types);
-const years = [1991, 2007, 1969, 2020];
-const ages = [];
+// console.log(types);
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
 
-for (let i = 0; i < years.length; i++) {
-  ages.push(2037 - years[i]);
-}
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2037 - years[i]);
+// }
 
-console.log(ages);
+// console.log(ages);
 
-// continue(exit current iterarion and continue to the next one) and break
+// // continue(exit current iterarion and continue to the next one) and break
 
-console.log("---ONLY STRINGS ---");
-for (let i = 0; i < jonas.length; i++) {
-  if (typeof jonas[i] !== "string") continue; // prints elements that are strings
-  console.log(jonas[i], typeof jonas[i]);
-}
+// console.log("---ONLY STRINGS ---");
+// for (let i = 0; i < jonas.length; i++) {
+//   if (typeof jonas[i] !== "string") continue; // prints elements that are strings
+//   console.log(jonas[i], typeof jonas[i]);
+// }
 
-// break
-console.log("---BREAKS WITH NUMBER ---");
-for (let i = 0; i < jonas.length; i++) {
-  if (typeof jonas[i] === "number") break; //exits loop when a number is found
-  console.log(jonas[i], typeof jonas[i]);
+// // break
+// console.log("---BREAKS WITH NUMBER ---");
+// for (let i = 0; i < jonas.length; i++) {
+//   if (typeof jonas[i] === "number") break; //exits loop when a number is found
+//   console.log(jonas[i], typeof jonas[i]);
+// }
+
+//////////////////////////////////////////
+//Looping backwards and nested loops
+// const jonas = [
+//   "Jonas",
+//   "Schmedman",
+//   2037 - 1991,
+//   "teacher",
+//   ["Michael", "Peter", "Steven"],
+//   true,
+// ];
+
+// for (let i = jonas.length - 1; i >= 0; i--) {
+//   console.log(i, jonas[i]);
+// }
+
+// Nested loop
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`--------Starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Lifting weight repetition ${rep}🏋🏾`);
+  }
 }
