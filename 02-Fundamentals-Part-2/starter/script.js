@@ -162,7 +162,6 @@
 
 // console.log(ages);
 
-
 //////////////////////////////////////////////////
 // Array Methods
 // Push - adds elements at the end of the array/gets the length of the new array
@@ -196,7 +195,6 @@ if (friends.includes("Peter")) {
   console.log("I have a friend");
 }
 
-
 ///////////////////////////////////////////
 // #CHALLANGE 2
 
@@ -220,7 +218,6 @@ if (friends.includes("Peter")) {
 // const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
 
 // console.log(tips, total);
-
 
 // ///////////////////////////////////////
 // Introduction to Objects
@@ -372,16 +369,48 @@ for (let rep = 1; rep <= 10; rep++) {
 }
 
 //Looping arrays: Breaking and Continuing.
+
 const jonas = [
   "Jonas",
   "Schmedman",
   2037 - 1991,
   "teacher",
   ["Michael", "Peter", "Steven"],
+  true,
 ];
-
+const types = [];
 
 // logging all elements to the array
-for(let i = 0; i < 5 ; i++ ){
-  console.log(jonas[0])
+for (let i = 0; i < jonas.length; i++) {
+  // Reading from jonas array
+  console.log(jonas[i], typeof jonas[i]);
+
+  // Filling types array
+  // types[i] = typeof jonas[i];
+  types.push(typeof jonas[i]);
+}
+
+console.log(types);
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+// continue(exit current iterarion and continue to the next one) and break
+
+console.log("---ONLY STRINGS ---");
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] !== "string") continue; // prints elements that are strings
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+// break
+console.log("---BREAKS WITH NUMBER ---");
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] === "number") break; //exits loop when a number is found
+  console.log(jonas[i], typeof jonas[i]);
 }
