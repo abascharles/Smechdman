@@ -440,17 +440,17 @@
 //   }
 // }
 
-////////////////////
+//////////////////////////////////////////////
 //While Loop
-for (let rep = 1; rep <= 10; rep++) {
-  console.log(`Lifting weights repetition ${rep}🏋🏾`);
-}
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep}🏋🏾`);
+// }
 
-let rep = 1;
-while (rep <= 10) {
-  console.log(`WHILE: Lifting weights repetition ${rep}🏋🏾`);
-}
-rep++;
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`WHILE: Lifting weights repetition ${rep}🏋🏾`);
+// }
+// rep++;
 
 // rolling dice
 let dice = Math.trunc(Math.random() * 6) + 1;
@@ -458,4 +458,75 @@ let dice = Math.trunc(Math.random() * 6) + 1;
 while (dice !== 6) {
   console.log(`You rolled a ${dice}`);
   dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice===6) console.log('Loop is about to end...')
 }
+
+
+
+//////////////////////
+// CHALLANGE - Last Fundamentals challange.
+const bills = [
+  22,
+  295,
+  176,
+  440,
+  37,
+  105,
+  10,
+  1100,
+  86,
+  52
+]
+const tips = []
+
+
+const totals = []
+
+const calcTip = (bill) => {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+  };
+
+
+for(let i = 0; i <=bills.length; i++  ){
+  const bill = bills[i];
+  const tip = calcTip(bill);
+  const total = tip + bill;
+
+  tips.push(tip);
+  totals.push(total)
+}
+
+
+console.log(`Bills:`, bills)
+console.log(`Tips:`, tips)
+console.log(`Totals:`, totals)
+
+
+// Bonus Challange.
+const arr =[
+  22,
+  295,
+  176,
+  440,
+  37,
+  105,
+  10,
+  1100,
+  86,
+  52
+]
+
+
+const calacAverage = function(arr){
+  let sum = 0
+  for(let i = 0; i < arr.length; i++ ){
+  
+    sum += arr[i]
+  }
+  const average = sum/arr.length;
+  return average;
+}
+
+console.log(calcAverage(arr))
+
+
