@@ -478,8 +478,6 @@ const bills = [
   52
 ]
 const tips = []
-
-
 const totals = []
 
 const calcTip = (bill) => {
@@ -517,7 +515,7 @@ const arr =[
 ]
 
 
-const calacAverage = function(arr){
+const calcAverage = function(arr){
   let sum = 0
   for(let i = 0; i < arr.length; i++ ){
   
