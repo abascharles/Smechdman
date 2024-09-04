@@ -1,25 +1,51 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 body {
-    background-color: rgb(226, 226, 190);
-    font-family: Arial;
-    font-size:20px;
+  background-color: rgb(226, 226, 190);
+  font-family: Arial;
+  font-size: 20px;
+  padding: 50;
 }
 
-h1{
-    font-size: 40px;
+h1 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+p {
+  margin-bottom: 20px;
 }
 
-.first{
-    color: red;
+.first {
+  color: red;
 }
 
-#your-name{
-    background-color: hsl(60, 100%, 50%);
-    border: 5px solid #1d1c1c44;
+#your-name {
+  background-color: hsl(60, 100%, 50%);
+  border: 5px solid #1d1c1c44;
+  width: 400px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Child selectors */
+#your-name h2 {
+  color: olivedrab;
+}
+
+#course-image {
+  width: 300px;
 }
