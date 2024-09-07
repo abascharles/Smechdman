@@ -117,3 +117,13 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+/* document.querySelector('.check').addEventListener('click', function(){
+
+  //gets the value entered and stores it into a variable    - guess
+  const guess = Number(document.querySelector('.guess').value) ;
+
+  //if there is no guess then give the below message
+  if(!guess){
+   document.querySelector('.message').textContent = '⛔No number!'
+  }
+})  */
