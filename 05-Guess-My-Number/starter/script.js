@@ -11,7 +11,7 @@
 
 ///////////////////////////////////////////////////////
 // Secret Number
-const secretNumber = Math.trunc(Math.random() *20) +1;
+let secretNumber = Math.trunc(Math.random() *20) +1;
 
 // Declaring the score to inc/dec later
 let score = 20
@@ -61,5 +61,16 @@ document.querySelector('.number').style.width = '30rem'
  }
 });
 
-
 // Resetting the game
+document.querySelector('.again').addEventListener('click', function(){
+score = 20;
+//new secret number 
+secretNumber = Math.trunc(Math.random() *20) +1;
+document.querySelector('.message').textContent = 'Start guessing...'
+document.querySelector('.score').textContent = score
+
+
+document.querySelector('body').style.backgroundColor = '#222'
+document.querySelector('.number').style.width = '15rem'
+document.querySelector('.number').textContent = '?'
+})
