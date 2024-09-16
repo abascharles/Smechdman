@@ -15,6 +15,7 @@ let secretNumber = Math.trunc(Math.random() *20) +1;
 
 // Declaring the score to inc/dec later
 let score = 20
+let highscore = 0
 
 
 // Listening to events
@@ -34,6 +35,11 @@ document.querySelector('.check').addEventListener('click', function(){
 document.querySelector('body').style.backgroundColor = '#60b347'
 document.querySelector('.number').style.width = '30rem'
 
+//high score implementation
+if(score > highscore){
+  highscore = score;
+  document.querySelector('.highscore').textContent = highscore
+}
 
 // When guess is too high
  }else if(guess > secretNumber){
@@ -76,3 +82,6 @@ document.querySelector('.guess').value = '';
 document.querySelector('body').style.backgroundColor = '#222';
 document.querySelector('.number').style.width = '15rem';
 })
+
+
+// Implementing the highscore
