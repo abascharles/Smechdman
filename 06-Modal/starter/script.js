@@ -23,5 +23,8 @@ overlay.addEventListener('click', closeModal);
 
 // Keyboard Events - global events as they do not happen on one element only
 document.addEventListener('keydown', function(e){
-    console.log(e);
+  if(e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    // Checking if the class list contains class modal or not
+      closeModal();
+  }
 }) 
