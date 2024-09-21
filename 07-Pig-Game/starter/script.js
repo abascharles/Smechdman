@@ -12,7 +12,10 @@ const btnRoll = document.querySelector('.btn--roll')
 const btnHold = document.querySelector('.btn--new')
 const player1 = document.querySelector('.player--0')
 const player2 = document.querySelector('.player--1')
+const scores = [0, 0]
 let currentScore = 0
+let activePlayer = 0
+
 
 // Setting conditions
 score0El.textContent = 0;
@@ -37,10 +40,15 @@ btnRoll.addEventListener('click', function(){
     if(dice !== 1){
         // Add dice to the currents score
         currentScore += dice;
-        current0El.textContent = currentScore
-    
+        document.getElementById(`current--${activePlayer}`).textContent = currentScore;
+       
     }else{
         // switch to the next player
+           //setting text content to 0
+        document.getElementById(`current--${activePlayer}`).textContent = 0;
+        currentScore = 0;
+        activePlayer = activePlayer === 0 ? 1 : 0
+    
         player1.classList.remove('player--active')
         player2.classList.add('player--active')
     }
