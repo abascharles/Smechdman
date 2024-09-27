@@ -18,6 +18,17 @@ const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 
+const switchPlayer = function () {
+  //setting text content to 0
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  // reset the current score not to continue from the previous instance
+  currentScore = 0;
+  // switching the players
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  player0El.classList.toggle('player--active');
+  player1EL.classList.toggle('player--active');
+};
+
 // Setting starting conditions
 score0El.textContent = 0;
 score1El.textContent = 0;
@@ -43,26 +54,21 @@ btnRoll.addEventListener('click', function () {
       currentScore;
   } else {
     // switch to the next player
-    //setting text content to 0
-    document.getElementById(`current--${activePlayer}`).textContent = 0;
-    // reset the current score
-    currentScore = 0;
-
-    // switching the players
-    activePlayer = activePlayer === 0 ? 1 : 0;
-
-    player0El.classList.toggle('player--active');
-    player1EL.classList.toggle('player--active');
+    switchPlayer();
   }
 });
+
+// Holding the score
 
 btnHold.addEventListener('click', function () {
   // 1. Add current score to active player score
   scores[activePlayer] += currentScore;
-  score[1] = scores[1] + currentScore;
-
+  //   scores[1] = scores[1] + currentScore;
+  document.getElementById(`score--${activePlayer}`).textContent =
+    scores[activePlayer];
   // 2.Check if player's score is >= 100;
   // Finish the game
 
   // Switch to the next player
+  switchPlayer();
 });
