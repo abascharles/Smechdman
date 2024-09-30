@@ -14,10 +14,32 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
-const scores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
-let playing = true;
+let scores, currentScore, activePlayer, playing;
+
+// Function to reset the gamme
+const init = function () {
+  scores = [0, 0];
+  currentScore = 0;
+  activePlayer = 0;
+  playing = true;
+
+  // Resetting all scores to 0 / Setting starting conditions
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  current0El.textContent = 0;
+  current1El.textcontent = 0;
+
+  // hidding the dice element(image) at the beginning of the game.
+  diceEl.classList.add('hidden');
+  // Removing the winner class
+  player0El.classList.remove('player--winner');
+  player1EL.classList.remove('player--winner');
+
+  player0El.classList.add('player--active');
+  player1EL.classList.remove('player--active');
+};
+
+init();
 
 const switchPlayer = function () {
   //setting text content to 0
@@ -29,12 +51,6 @@ const switchPlayer = function () {
   player0El.classList.toggle('player--active');
   player1EL.classList.toggle('player--active');
 };
-
-// Setting starting conditions
-score0El.textContent = 0;
-score1El.textContent = 0;
-// hidding the dice element(image) at the beginning of the game.
-diceEl.classList.add('hidden');
 
 // Rolling the dice functionality
 
@@ -90,17 +106,4 @@ btnHold.addEventListener('click', function () {
 });
 
 // Resetting the game
-btnNew.addEventListener('click', function () {
-  // Resetting all scores to 0
-  score0El.textContent = 0;
-  score1El.textContent = 0;
-
-  current0El.textContent = 0;
-  current1El.textcontent = 0;
-
-  // Hidding the dice element
-  diceEl.classList.add('hidden');
-
-  // Setting player one as acive player
-  player0El.classList.add('.player--active');
-});
+btnNew.addEventListener('click', init);
